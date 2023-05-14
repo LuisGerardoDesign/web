@@ -1,18 +1,444 @@
 :root {
+
+    --nav-color: #1845FF;
     --color-principal: #1845FF;
-  }
-  body {
-    background-color: var(--color-principal);
+    --color-secundario: #E7BA00;
+    --negro: #282828;
+    --blanco: #F6F6F6;
+    --globe: #1845FF;
+
+}
+
+.dark-mode{
+    --nav-color: #282828;
+    --color-principal: #E7BA00;
+    --color-secundario: #1845FF;
+    --negro: #f6f6f6;
+    --blanco: #282828;
+    --globe: #F6F6F6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    transition: background-color 0.5s;
+    background-color: var(--blanco);
+}
+/* NAV */
+
+header{
+    color: #F6F6F6;
+    z-index: 9999;
     display: flex;
-    align-items: center;
     justify-content: center;
+}
+
+nav{
+    user-select: none;
+    overflow: hidden;
+    margin-top: 40px;
+    position: fixed;
+    height: 15Vmin;
+    width: 80%;
+    background-color: var(--nav-color);
+    display: flex;
+    border-radius: 2vmin;
+    box-shadow: 0px 16px 47px 15px rgba(0, 0, 0, 0.25);
+}
+.logo{
+    padding: 4vmin 8vmin;;
+    align-items: center;
+    width: auto;
+    height: 7vmin;
+    transition: hover 0.5s ease-in-out;
+}
+#icon{
+    scale: 70%;
+    margin: 4vmin;
+    align-items: center;
+    width: auto;
+    height: 7vmin;
+    cursor: pointer;
+    transition: hover 0.5s ease-in-out;
+}
+#icon:hover{
+    scale: 80%
+}
+.nav{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
   }
-  .logo{
+.nav li {
+    margin-right: 9vmin;
+  }
+.nav a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 3vmin;
+    font-weight: 700;
+    padding: 1.3vmin;
+}
+.nav a:hover{
+    background-color: #00000038;
+    border-radius: 2vmin;
+}
+.linea{
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    scale: 15%;
+    border-radius: 3vmin;
+    transform: translateY(4vmin);
+    height: 1vmin;
+    width: 12vmin;
+    background-color: #F6F6F6;
+}
+.linea2{
+    position: absolute;
+    border-radius: 3vmin;
+    transform: translateY(4vmin) translateX(21.5vmin);
+    height: 1vmin;
+    width: 16.2vmin;
+    background-color: #F6F6F6;
+}
+.linea3{
+    position: absolute;
+    border-radius: 3vmin;
+    transform: translateY(4vmin) translateX(48vmin);
+    height: 1vmin;
+    width: 19.2vmin;
+    background-color: #F6F6F6;
+}
+.linea4{
+    position: absolute;
+    border-radius: 3vmin;
+    transform: translateY(4vmin) translateX(78vmin);
+    height: 1vmin;
+    width: 18vmin;
+    background-color: #F6F6F6;
+}
+/* FIN DEL NAV */
+
+/* HERO SECTION */
+
+.hero-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+}
+.hero-background img{
+    transform: translateY(-20vmin);
+    z-index: -100;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.hero h1{
+    margin-left: 3vmin;
+    line-height: 22vmin;
+    font-size: 21vh;
+    color: var(--negro);
+    font-weight: 700;
+    user-select: none;
+}
+.hero-container{
+    width: 90%;
+    margin-top: -35vmin;
+    height: 42vmin;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+}
+.hero-left{
+    width: 56%;
+    height: 100%;
+}
+.hero-rigth{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items:end;
+}
+.hero-rigth h3{
+    font-size: 4vmin;
+    font-weight: 400;
+    color: var(--negro);
+}
+.ver-mas {
+    width: 9vmin;
+    height: 9vmin;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
+  .ver-mas svg {
+    z-index: -100;
+    width: 9vmin;
+    height: 9vmin;
+    transform: scale(90%);
+  }
+  
+#PlusElipse{
+    fill: var(--negro);
+}
+#PlusSign{
+    fill: var(--blanco);
+}
+/* FIN DE HERO SECTION */
+
+/* INICIO DE LA PRESENTACION */
+
+.presentacion{
+    margin: 6vmin 5%;
+    height: 80vmin;
+    width: 90%;
+    display: flex;
+}
+
+.presentacionLeft{
+    width: 45%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer{
+    width: 86%;
+    height: 86%;
+    background-image: url(IMG/IMG_9692.png);
+    object-fit: cover;
+    background-color: var(--color-principal);
+    border-radius: 10vmin;
+    background-size: cover;
+}
+.imageContainer2{
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.5) 1px, 
+        transparent 1px
+      );
+      background-position: 50% 50%;
+      background-size: 1.1rem 1.1rem;
+      padding: 4rem;
+      border-radius: 1.25rem;
+      overflow: hidden;
+}
+
+.presentacionRigth{
+    margin-top: 5vmin;
+    width: 40%;
+    height: 90%;
+    display: flexbox;
+}
+.presentacionRigth h2{
+    color: var(--negro);
+    font-size: 13vmin;
+    font-weight: 600;
+    line-height: 11.5vmin;
+    margin-bottom: 1.5vmin;
+}
+.presentacionRigth h3{
+    font-weight: 500;
+    font-size: 5vmin;
+    margin-left: 3vmin;
+    color: var(--negro);
+    margin-bottom: 1.5vmin;
+}
+.divisor{
+    width: 90%;
+    height: .6vmin;
+    background-color: var(--negro);
+    margin-bottom: 1.5vmin;
+}
+.presentacionRigth p{
+    color: var(--negro);
+    margin-left: 3vmin;
+    font-size: 3.9vmin;
+}
+.presentacionVerMas{
+    margin-top: 5vmin;
+    width: 5%;
+    height: 83%;
+    display: flex;
+    align-items: flex-end
+}
+.presentacion .wireframeglobe svg{
+    position: absolute;
+    transform: translateX(-20vmin);
+    z-index: -10;
+}
+#Globe{
+    transform: translateX(-60vmin);
+    fill:var(--globe);
+}
+.estrellas{
+    z-index: -150;
+    position: absolute;
+    scale: 120%;
+}
+.estrella1{
+    transform: translateX(130vmin) translateY(7vmin) rotate(25.44deg);
+}
+.estrella2{
+    transform: translateX(65vmin) translateY(50vmin) rotate(-25deg);
+}
+#star{
+    fill: var(--negro);
+}   
+/* FIN DE LA PRESENTACION */
+
+/* */
+.myWork{
+    margin: 6vmin 5%;
+    height: 70vmin;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.logosContainer {
+    display: flex;
+    gap: 0em 1vmin;
+    grid-auto-flow: row;
+    text-align: center;
+    font-size:4vmin;
+    font-weight: 600;
+    transition:1s ease;
+}
+.logosContainer span{
+    color: var(--blanco);
+}
+
+.LOGO-1 {background-color: var(--negro);
+    display: flexbox;
+    border-radius: 40px 4px 4px 40px;
+    justify-content: center;
+    padding: 5vmin;
+}
+  
+.LOGO-2 {background-color: var(--negro);
+    display: flexbox;
+    border-radius: 4px 4px 4px 4px;
+    justify-content: center;
+    padding: 5vmin;
+}
+  
+.LOGO-3 {background-color: var(--negro);
+    display: flexbox;
+    border-radius: 4px 4px 4px 4px;
+    justify-content: center;
+    padding: 5vmin;
+}
+
+.LOGO-4 {background-color: var(--negro);
+    display: flexbox;
+    border-radius: 4px 40px 40px 4px;
+    justify-content: center;
+    padding: 5vmin;
+}
+
+  
+.open{
+    display: flexbox;
+    width: 94%;
+    justify-content: center;
+    padding: 5vmin;
+    transition: all .5s;
+    opacity: 1;
+}
+
+.close{
+    width: 2%;
+    display: flexbox;
+    justify-content: center;
+    writing-mode: vertical-rl;text-orientation: mixed;
+    flex-direction: column; 
+    transition: all .5s;
+}
+
+.logoContent{
+    overflow: hidden;
+    display: flex;
+    margin-top: 3vmin;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+}
+.hiddenContent{
+    transition: all .5s;
+    display: none;
+    opacity: 0;
+}
+.logocontainer{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+#CoolLogo{
+    fill: var(--blanco);
+}
+.textContent{
+    width: 50%;
+}
+.textContent p{
+    text-align: left;
+    font-size: 3vmin;
+    font-weight: 400;
+    color: var(--blanco);
+}
+/* ANIMACIONES INTERACTIVAS */
+
+.hidden{
+    z-index: -10;
+    filter: blur(10px);
+    transition: opacity 1.5s ease-in;
+    transition: filter 1.5s ease-in;
+}
+.show {
+    opacity: 1;
+    filter: blur(0px);
+}
+/* FIN DE ANIMACIONES INTERACTIVAS */
+
+/* CURSOR EPICO */
+
+#trailer {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 500ms ease;
+    mix-blend-mode: difference;
+}
+body:hover > #trailer {
+    opacity: 1;
+}
+/*404 NO HAY NADA ACA*/
+
+.nada {
+    display: flex;
+    align-items: flex-end;
+    height: 100vmin;
+}
+.nada h1{
+    margin: 20vmin;
+    color: var(--negro);
+    font-size: 10vmin;
+    font-weight: 700;
+}
